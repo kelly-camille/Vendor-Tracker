@@ -5,14 +5,14 @@ using System;
 
 namespace Vendor.Tests
 {
-  [TestClass]
-  public class VendorTests : IDisposable
-  {
+//   [TestClass]
+//   public class VendorTests : IDisposable
+//   {
 
-    public void Dispose()
-    {
-      Vendor.ClearAll();
-    }
+//     public void Dispose()
+//     {
+//       Vendor.ClearAll();
+//     }
 
     [TestMethod]
     public void VendorConstructor_CreatesInstanceOfVendor_Vendor()
@@ -20,5 +20,5 @@ namespace Vendor.Tests
       Vendor newVendor = new Vendor("test vendor");
       Assert.AreEqual(typeof(Vendor), newVendor.GetType());
     }
-  }
+//   }
 }
