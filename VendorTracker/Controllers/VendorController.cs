@@ -50,7 +50,7 @@ namespace VendorTracker.Controllers
   //     return View(model);
   // }
    // // This one creates new Orders within a given vednor, not new vendors:
-    [HttpPost("/vendors/{vendorId}/orders")]
+    [HttpPost("/vendors/{vendorId}/order")]
     public ActionResult Create(int vendorId, string orderDescription)
     {
       Dictionary<string, object> model = new Dictionary<string, object>();
