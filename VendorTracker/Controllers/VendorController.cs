@@ -39,16 +39,6 @@ namespace VendorTracker.Controllers
       return View(model);
     }
 
-  //   [HttpGet("/vendors/{vendorId}/orders/{orderId}")]
-  //   public ActionResult Show(int vendorId, int orderId)
-  //   {
-  //     Order order = Order.Find(orderId);
-  //     Vendor vendor = Vendor.Find(vendorId);
-  //     Dictionary<string, object> model = new Dictionary<string, object>();
-  //     model.Add("order", order);
-  //     model.Add("vendor", vendor);
-  //     return View(model);
-  // }
    // // This one creates new Orders within a given vednor, not new vendors:
     [HttpPost("/vendors/{vendorId}/order")]
     public ActionResult Create(int vendorId, string orderDescription)
@@ -62,23 +52,5 @@ namespace VendorTracker.Controllers
       model.Add("vendor", foundVendor);
       return View("Show", model);
     }
-
-
-
-    // // This one creates new Orders within a given vednor, not new vendors:
-
-    // [HttpPost("/vendors/{vednorId}/order")]
-    // public ActionResult Create(int vednorId, string orderDescription)
-    // {
-    //   Dictionary<string, object> model = new Dictionary<string, object>();
-    //   Vendor foundVendor = Vendor.Find(vendorId);
-    //   Order newOrder = new Item(itemDescription);
-    //   foundVendor.AddItem(newOrder);
-    //   List<Item> vendorItems = foundVendor.Items;
-    //   model.Add("order", vendorItems);
-    //   model.Add("vendor", foundVendor);
-    //   return View("Show", model);
-    // }
-
   }
 }
